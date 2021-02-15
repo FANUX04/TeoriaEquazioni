@@ -3,10 +3,10 @@ using EquazioniLibrary;
 namespace EquazioniLibrary.Test
 {
     [TestClass]
-    public class UnitTest1
+    public class TestsEquazioni
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestEquazionePrimoGradoDeterminata()
         {
             double a = 2;
             bool valoreaspettato =true;
