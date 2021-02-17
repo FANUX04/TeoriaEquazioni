@@ -6,11 +6,23 @@ namespace EquazioniLibrary
     {
         public static bool IsDetermined(double a)
         {
-            bool valore=false;
-            
-            if (a!=0)
+            bool valore = false;
+
+            if (a != 0)
             {
-                valore=true;
+                valore = true;
+            }
+            return valore;
+        }
+        public static bool IsInconsisted(double a,double b)
+        {
+            bool valore = false;
+            if (a==0)
+            {
+                if(b!=0)
+                {
+                    valore = true;
+                }
             }
             return valore;
         }

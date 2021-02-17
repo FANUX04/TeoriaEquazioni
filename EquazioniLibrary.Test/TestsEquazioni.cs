@@ -14,5 +14,15 @@ namespace EquazioniLibrary.Test
             Assert.AreEqual(valoreaspettato, controllo);
 
         }
+        [TestMethod]
+        public void testIsInconsisted()
+        {
+            double a = 0;
+            double b = 12;
+            bool valoreaspettato = true;
+            bool controllo = Equazioni.IsInconsisted(a,b);
+            Assert.AreEqual(valoreaspettato, controllo);
+
+        }
     }
 }
