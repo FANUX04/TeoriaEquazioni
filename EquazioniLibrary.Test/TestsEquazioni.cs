@@ -24,5 +24,13 @@ namespace EquazioniLibrary.Test
             Assert.AreEqual(valoreaspettato, controllo);
 
         }
+        [TestMethod]
+        public void testIsDegree2()
+        {
+            double a = 0;
+            bool valoreaspettato = false;
+            bool controllo = Equazioni.IsDetermined(a);
+            Assert.AreEqual(valoreaspettato, controllo);
+        }
     }
 }

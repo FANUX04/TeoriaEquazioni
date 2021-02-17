@@ -26,5 +26,18 @@ namespace EquazioniLibrary
             }
             return valore;
         }
+        public static bool IsDegree2(double a)
+        {
+            bool valore = false;
+            if (a==0)
+            {
+                return valore;
+            }
+            else
+            {
+                valore = true;
+                return valore;
+            }
+        }
     }
 }
