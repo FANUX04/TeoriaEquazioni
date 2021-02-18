@@ -39,5 +39,60 @@ namespace EquazioniLibrary
                 return valore;
             }
         }
+        public static double Delta(double a ,double b,double c)
+        {
+            double delta=double.NaN;
+           if (IsDegree2(a)==true)
+           {
+                 delta = (b * b) - (4 * a * c);
+           }
+
+           
+
+            return delta;
+        }
+        public static string RisoluzioneEquazioneSecondoGrado(double a,double b,double c)
+        {
+            double delta;
+           
+                delta = Delta(a,b,c);
+                if(delta==0)
+                {
+                    double x1 = -(b) / (2 * a);
+                    return $"c'è solo una soluzione che è {x1}";
+                }
+                else if (delta<0)
+                {
+                    return $"non ci sono soluzioni, perché è impossibile";
+                }
+                else if(delta>0)
+                {
+                    double X1 = (-b + Math.Sqrt(delta))/ (2 * a);
+                    double X2 = (-b - Math.Sqrt(delta)) / (2 * a);
+                    return $"l'equazione ha due soluzioni {X1} e {X2}";
+                }
+                else
+                {
+                return "operazione non eseguibile";
+                }
+           
+        }
+        public static string EquationDegree1(double a, double b)
+        {
+            if(IsDetermined(a))
+            {
+                double x = b / a;
+                return $"la soluzione dell'equazione è {x}";
+            }
+            else if (IsInconsisted(a,b))
+            {
+                return "l'equazione è IMPOSSIBILE";
+            }
+            else
+            {
+                return "l'equazione è INDETERMINATA";
+            }
+
+        }
     }
 }
