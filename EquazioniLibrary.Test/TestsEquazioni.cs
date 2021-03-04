@@ -58,7 +58,7 @@ namespace EquazioniLibrary.Test
             double a = 1;
             double b = 5;
             double c = 6;
-            string valoreaspettato = $"l'equazione ha due soluzioni {-2} e {-3}"; 
+            string valoreaspettato = $"due soluzioni che sono {-2} e {-3}"; 
             string controllo = Equazioni.RisoluzioneEquazioneSecondoGrado(a, b, c);
             Assert.AreEqual(valoreaspettato, controllo);
         }
@@ -69,7 +69,7 @@ namespace EquazioniLibrary.Test
             double b = 12;
             double c = 3;
             double risultato = -1.0/ 2;
-            string valoreaspettato = $"c'è solo una soluzione che è {risultato}";
+            string valoreaspettato = $"una sola soluzione che è {risultato}";
             string controllo = Equazioni.RisoluzioneEquazioneSecondoGrado(a, b, c);
             Assert.AreEqual(valoreaspettato, controllo);
         }
@@ -79,7 +79,7 @@ namespace EquazioniLibrary.Test
             double a = 0;
             double b = 5;
             double c = 6;
-            string valoreaspettato = "operazione non eseguibile";
+            string valoreaspettato = "non eseguibile";
             string controllo = Equazioni.RisoluzioneEquazioneSecondoGrado(a, b, c);
             Assert.AreEqual(valoreaspettato, controllo);
         }
@@ -89,7 +89,7 @@ namespace EquazioniLibrary.Test
             double a = 2;
             double b = 0;
             double c = 1;
-            string valoreaspettato = $"non ci sono soluzioni, perché è impossibile";
+            string valoreaspettato = $"nessuna soluzione, perché è impossibile";
             string controllo = Equazioni.RisoluzioneEquazioneSecondoGrado(a, b, c);
             Assert.AreEqual(valoreaspettato, controllo);
         }

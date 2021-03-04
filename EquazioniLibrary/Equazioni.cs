@@ -56,25 +56,25 @@ namespace EquazioniLibrary
             double delta;
            
                 delta = Delta(a,b,c);
-                if(delta==0)
-                {
-                    double x1 = -(b) / (2 * a);
-                    return $"c'è solo una soluzione che è {x1}";
-                }
-                else if (delta<0)
-                {
-                    return $"non ci sono soluzioni, perché è impossibile";
-                }
-                else if(delta>0)
-                {
-                    double X1 = (-b + Math.Sqrt(delta))/ (2 * a);
-                    double X2 = (-b - Math.Sqrt(delta)) / (2 * a);
-                    return $"l'equazione ha due soluzioni {X1} e {X2}";
-                }
-                else
-                {
-                return "operazione non eseguibile";
-                }
+            if (delta == 0)
+            {
+                double x1 = -(b) / (2 * a);
+                return $"una sola soluzione che è {x1}";
+            }
+            else if (delta < 0)
+            {
+                return $"nessuna soluzione, perché è impossibile";
+            }
+            else if (delta > 0)
+            {
+                double X1 = (-b + Math.Sqrt(delta)) / (2 * a);
+                double X2 = (-b - Math.Sqrt(delta)) / (2 * a);
+                return $"due soluzioni che sono {X1} e {X2}";
+            }
+            else
+            {
+                return  "non eseguibile";
+            }
            
         }
         public static string EquationDegree1(double a, double b)
